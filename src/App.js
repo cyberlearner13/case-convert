@@ -25,7 +25,7 @@ class App extends Component {
         variableName: value,
         showErrorMessage: ''
       });
-    
+
 
   }
 
@@ -62,9 +62,30 @@ class App extends Component {
 
            <Group inline>
              <label>Cases</label>
-             <Radio label='Small' name="case" />
-             <Radio label='Medium' name="case" />
-             <Radio label='Large' name="case" />
+             <div className='field'>
+                  <div className='ui radio checkbox'>
+                    <input type='radio' value='s' name='cases' onClick = { event => console.log(event.target.value)} />
+                    <label>Snake</label>
+                  </div>
+              </div>
+              <div className='field'>
+                   <div className='ui radio checkbox'>
+                     <input type='radio' value='d' name='cases' onClick = { event => console.log(event.target.value)} />
+                     <label>Dash</label>
+                   </div>
+               </div>
+               <div className='field'>
+                    <div className='ui radio checkbox'>
+                      <input type='radio' value='c' name='cases' onClick = { event => console.log(event.target.value)} />
+                      <label>Camel</label>
+                    </div>
+                </div>
+                <div className='field'>
+                     <div className='ui radio checkbox'>
+                       <input type='radio' value='p' name='cases' onClick = { event => console.log(event.target.value)} />
+                       <label>Pascal</label>
+                     </div>
+                 </div>
            </Group>
            <Button onClick = { ()=> this.convertCase() }>Submit</Button>
          </Form>
